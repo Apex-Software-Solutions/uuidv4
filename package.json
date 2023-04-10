@@ -1,0 +1,23 @@
+{
+  "name": "@apexsoftwaresolutions/uuidv4",
+  "version": "1.0.2",
+  "description": "UUIDv4 Generator Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.*.js"
+  },
+  "keywords": [
+    "uuidv4"
+  ],
+  "files": [
+    "./src/**/*"
+  ],
+  "author": "Christopher Harwell",
+  "license": "ISC",
+  "dependencies": {
+  }, 
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
