@@ -21,16 +21,15 @@ jobs:
           node-version: '16'
 
       # Install dependencies (required by Run tests step)
-      - name: Install dependencies
-        run: yarn install
+      - name: Pre CI
+        run: rm -fr node_modules
 
+      - name: CI
+        run: yarn install --frozen-lockfile
+        
       # Tests
       - name: Run tests
         run: yarn test
-        
-      # CI
-      - name: Run CI
-        run: yarn ci
         
       # Configure Git
       - name: Git configuration
