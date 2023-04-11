@@ -10,7 +10,6 @@ run_build() {
     if [ -d "./dist" ] 
         then
             echo "Directory ./dist exists." 
-            build
         else
             echo "Error: Directory ./dist does not exists."
             echo "Making directory dist"
