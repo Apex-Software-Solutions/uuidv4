@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "UUIDv4 Generator Package",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apex-Software-Solutions/uuidv4"
+  },
   "scripts": {
     "test": "mocha tests/**/*.*.js"
   },
