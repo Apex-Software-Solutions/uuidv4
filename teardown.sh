@@ -2,7 +2,7 @@
 
 tear_down() {
     echo "Starting tear down"
-    rm -rf ./dist
+    cd ./dist && rm -rf ./*
     echo "Tear down finished"
 }
 
