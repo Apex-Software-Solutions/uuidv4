@@ -21,8 +21,8 @@ jobs:
           node-version: '16'
 
       # Run pre-deploy script
-      - name: Build Deployment Directory
-        run: yarn run build:pre-deploy  
+#       - name: Build Deployment Directory
+#         run: yarn run build:pre-deploy  
       
       # Install dependencies (required by Run tests step)
       - name: Pre CI
@@ -84,8 +84,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
       
       # Run post-deploy script
-      - name: Remove Dist Directory
-        run: yarn run build:post-deploy
+#       - name: Remove Dist Directory
+#         run: yarn run build:post-deploy
 
       # Push repository changes
       - name: Push changes to repository
