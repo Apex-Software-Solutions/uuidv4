@@ -16,7 +16,7 @@
     "uuidv4"
   ],
   "files": [
-    "./dist/**/**"
+    "./dist/**/*"
   ],
   "author": "Christopher Harwell",
   "license": "ISC",
