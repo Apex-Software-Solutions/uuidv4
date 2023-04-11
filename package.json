@@ -9,13 +9,14 @@
   },
   "scripts": {
     "test": "mocha tests/**/*.*.js",
-    "build:deploy": "cp -r ./src/ dist/"
+    "build:pre-deploy": "sh build.sh",
+    "build:post-deploy": "sh teardown.sh"
   },
   "keywords": [
     "uuidv4"
   ],
   "files": [
-    "./lib/**/*"
+    "./dist/**/*"
   ],
   "author": "Christopher Harwell",
   "license": "ISC",
