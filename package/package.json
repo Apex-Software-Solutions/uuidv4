@@ -15,6 +15,9 @@
   "keywords": [
     "uuidv4"
   ],
+  "files": [
+    "./dist/*"
+  ],
   "author": "Christopher Harwell",
   "license": "ISC",
   "dependencies": {},
