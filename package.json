@@ -8,13 +8,14 @@
     "url": "https://github.com/Apex-Software-Solutions/uuidv4"
   },
   "scripts": {
-    "test": "mocha tests/**/*.*.js"
+    "test": "mocha tests/**/*.*.js",
+    "build:deploy": "cp -r ./src/ dist/"
   },
   "keywords": [
     "uuidv4"
   ],
   "files": [
-    "./src/**/*"
+    "./lib/**/*"
   ],
   "author": "Christopher Harwell",
   "license": "ISC",
