@@ -25,13 +25,16 @@ jobs:
         run: yarn run build:pre-deploy  
       
       # Install dependencies (required by Run tests step)
-      - name: Install dependencies
-        run: yarn install
+      - name: Pre CI
+        run: rm -fr node_modules
 
+      - name: CI
+        run: yarn install --frozen-lockfile
+        
       # Tests
       - name: Run tests
         run: yarn test
-
+        
       # Configure Git
       - name: Git configuration
         run: |
@@ -53,7 +56,7 @@ jobs:
       - name: Bump pre-release version
         if: startsWith(github.event.inputs.release-type, 'pre')
         run: |
-          echo "NEW_VERSION=$(npm --no-git-tag-version --preid=beta version $RELEASE_TYPE
+          echo "NEW_VERSION=$(npm --no-git-tag-version --preid=beta version $RELEASE_TYPE)"
           echo "RELEASE_TAG=beta" >> $GITHUB_ENV
         env:
           RELEASE_TYPE: ${{ github.event.inputs.release-type }}
